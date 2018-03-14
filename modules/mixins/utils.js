@@ -6,6 +6,7 @@ const pushHash = (hash) => {
     : '';
 
   if(history.replaceState) {
+    console.log('[DEBUG], replace hash history');
     let loc = window.location;
     history.replaceState(null, null, hash
       ? hash
