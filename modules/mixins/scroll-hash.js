@@ -56,6 +56,7 @@ const scrollHash = {
 
   changeHash(to) {
     if (this.isInitialized()) {
+      console.log('[DEBUG] push hash');
       utils.pushHash(to);
     }
   },
