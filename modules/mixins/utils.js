@@ -5,9 +5,9 @@ const pushHash = (hash) => {
       : '#' + hash
     : '';
 
-  if(history.pushState) {
+  if(history.replaceState) {
     let loc = window.location;
-    history.pushState(null, null, hash
+    history.replaceState(null, null, hash
       ? hash
       // remove hash
       : loc.pathname + loc.search);
